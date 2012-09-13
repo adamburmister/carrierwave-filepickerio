@@ -29,11 +29,15 @@ Usage
 
 Setup a CarrierWave uploader as normal. 
 
+Include the Filepicker.io JavaScript in your page:
+    
+    <%= javascript_include_tag :filepickerio %>
+
 To use the FilePicker.io uploader you need to call the view helper like so:
 
     <%= f.filepickerio_field :uploader_name %>
 
-This will render a hidden input configured for the uploader, as well as including the required JavaScript in the page.
+This will render a hidden input configured for the uploader, which will automatically be initialised on page load.
 
 You may include any of the additional parameters...
 
