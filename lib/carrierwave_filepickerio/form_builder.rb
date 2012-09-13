@@ -1,14 +1,7 @@
 module CarrierWaveFilepickerio
   class FormBuilder < ActionView::Helpers::FormBuilder
-    def file_field(method, options = {})
-      options.merge!(:name => "file")
-      hidden_field(:key,                             :name => "key") <<
-      hidden_field(:aws_access_key_id,               :name => "AWSAccessKeyId") <<
-      hidden_field(:acl,                             :name => "acl") <<
-      hidden_field(:success_action_redirect,         :name => "success_action_redirect") <<
-      hidden_field(:policy,                          :name => "policy") <<
-      hidden_field(:signature,                       :name => "signature") <<
-      super
+    def filepickerio_field(object_name, method, options = {})
+      InstanceTag.new(object_name, method, self, options.delete(:object)).to_input_field_tag("filepicker", options)
     end
   end
 end
