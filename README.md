@@ -40,21 +40,8 @@ You may include any of the additional parameters...
 Additional Options
 ------------------
 
+Any additional Filepicker.io configuration can be passed within an optional data hash passed to the view helper method.
 
-text	The text to show on the button. Defaults to "Pick File".
+    <%= f.filepickerio_field :uploader_name, data: { "fp-button-text" => "Pick a lolcat to upload" } %>
 
-class	The class(es) to be applied to the button for styling, for example "btn btn-primary"
-
-mimetypes	The mimetype(s) that the input should be limited to, for example "image/png,text/*"
-
-container	Where to load the filepicker UI into. Possible values are "window", "modal", or the id of an iframe in the current document. Defaults to "modal"
-
-multiple	If "true", allow the user to select multiple files. The value of the input field will be a list of the selected urls, separated by commas. Defaults to "false". (Note: "true" and "false" are strings)
-
-persist	If "true", the uploaded files are persisted. Defaults to false. Learn more about persistance.
-
-services	The list of services to limit to, by name. For example "BOX,COMPUTER,FACEBOOK"
-
-onchange	When the dialog finishes uploading the file, the javascript code in the onchange field will be run with a special 'event' variable. The variable has a files attribute with information about the files (jQuery users: look under event.originalEvent).
-
-See [https://developers.filepicker.io/docs/web/](https://developers.filepicker.io/docs/web/) for more details.
+See [https://developers.filepicker.io/docs/web/](https://developers.filepicker.io/docs/web/) for a full list of configuration options.
