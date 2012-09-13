@@ -4,7 +4,7 @@ require "carrierwave_filepickerio/version"
 
 Gem::Specification.new do |s|
   s.name        = "carrierwave-filepickerio"
-  s.version     = Carrierwave::Filepickerio::VERSION
+  s.version     = CarrierwaveFilepickerio::VERSION
   s.authors     = ["Adam Burmister"]
   s.email       = ["adam.burmister@gmail.com"]
   s.homepage    = ""
