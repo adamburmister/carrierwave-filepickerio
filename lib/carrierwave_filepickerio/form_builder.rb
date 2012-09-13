@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module CarrierwaveFilepickerio
   class FormBuilder < ActionView::Helpers::FormBuilder
 

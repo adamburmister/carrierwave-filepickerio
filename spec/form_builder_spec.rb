@@ -3,8 +3,6 @@
 require 'spec_helper'
 
 describe CarrierwaveFilepickerio::FormBuilder do
-  include FormBuilderHelpers
-
   describe "#filepickerio_field" do
 
     def form_with_filepickerio_field
@@ -14,5 +12,6 @@ describe CarrierwaveFilepickerio::FormBuilder do
     context "form" do
       pending
     end
+
   end
 end

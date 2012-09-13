@@ -1,4 +1,4 @@
-require 'carrierwave_filepickerio/form_builder'
+# encoding: utf-8
 
 module CarrierwaveFilepickerio
   class Railtie < Rails::Railtie
