@@ -1,4 +1,4 @@
-module CarrierWaveFilepickerio
+module CarrierwaveFilepickerio
   class FormBuilder < ActionView::Helpers::FormBuilder
 
     # Returns a hidden input tag tailored for a Filepicker.io upload widget to be attached.

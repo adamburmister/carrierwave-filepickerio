@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe CarrierWaveFilepickerio::FormBuilder do
+describe CarrierwaveFilepickerio::FormBuilder do
   include FormBuilderHelpers
 
   describe "#filepickerio_field" do

@@ -35,7 +35,7 @@ Include the Filepicker.io JavaScript in your page:
 
 To use the FilePicker.io uploader you need to call the view helper like so:
 
-    <%= f.filepickerio_field :uploader_name %>
+    <%= f.filepickerio_field :avatar %>
 
 This will render a hidden input configured for the uploader, which will automatically be initialised on page load.
 
