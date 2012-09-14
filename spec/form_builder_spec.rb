@@ -4,13 +4,24 @@ require 'spec_helper'
 
 describe CarrierwaveFilepickerio::FormBuilder do
   describe "#filepickerio_field" do
-
-    def form_with_filepickerio_field
-      form {|f| f.filepickerio_field :logo }
+    context "javascripts" do
+      it "should expand :filepickerio to the filepicker.io JS URL" do
+        pending
+      end
     end
 
-    context "form" do
-      pending
+    context "form field" do
+      it "should have a type of filepickerio" do
+        pending
+      end
+
+      it "should have the API key as a data property data-fp-apikey" do
+        pending
+      end
+
+      it "should render any passed Filepicker.io configuration data options" do
+        pending
+      end
     end
 
   end
