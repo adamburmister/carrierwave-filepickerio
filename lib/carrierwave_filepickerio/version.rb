@@ -1,5 +1,7 @@
 # encoding: utf-8
 
-module CarrierwaveFilepickerio
-  VERSION = "0.0.1"
+module CarrierWave
+  module Filepickerio
+    VERSION = "0.0.1"
+  end
 end

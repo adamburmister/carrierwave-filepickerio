@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe CarrierwaveFilepickerio::FormBuilder do
+describe CarrierWave::Filepickerio::FormBuilder do
   describe "#filepickerio_field" do
 
     let :user do
