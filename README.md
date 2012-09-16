@@ -56,10 +56,16 @@ You can change the button text by passing along a string as the first parameter
 <%= f.fp_file_field :image, "Pick a picture" %>
 ```
 
-To include a drag-n-drop area pass the dragdrop parameter
+To include a drag-n-drop area pass the dragdrop parameter in the options hash, which is the last parameter.
 
 ```erb
 <%= f.fp_file_field :image, "Pick a picture", dragdrop: true %>
+```
+
+You can also attach any other events to the input as normal, for instance you can listen to change events:
+
+```erb
+<%= f.fp_file_field :image, "Pick a picture", dragdrop: true, onchange: '$("#pic").attr("src", arguments[0].files[0].url)' %>
 ```
 
 Specify any Filepicker.io additional data options in the data hash
