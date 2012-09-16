@@ -17,8 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :image %><br />
-    <%= image_tag(@picture.image_url, id: 'pic') if @picture.image? %>
-    <%= f.fp_file_field :image, onchange: '$("#pic").attr("src", arguments[0].files[0].url)' %>
+    <%= image_tag(@picture.image_url || 'blank.png', id: 'pic') %>
+    <%= f.fp_file_field :image, onchange: '$("#pic").attr("src", arguments[0].files[0].url)', data: { 'fp-mimetypes'=>'image/jpg,image/png,image/jpeg' } %>
     <%= f.hidden_field :image_cache %>
   </div>
   <div class="actions">
