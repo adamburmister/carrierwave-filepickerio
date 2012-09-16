@@ -29,16 +29,32 @@ Usage
 
 Setup a CarrierWave uploader as normal. 
 
-Include the Filepicker.io JavaScript in your page:
-    
-    <%= javascript_include_tag :filepickerio %>
+Include the filepicker.io JavaScript library in your page (such as your application.html.erb layout):
+
+```erb
+<%= javascript_include_tag "//api.filepicker.io/v0/filepicker.js" %>
+```
+
+... or, if you're not using the asset pipeline, you can use the expansion:
+
+```erb
+<%= javascript_include_tag :filepickerio %>
+```
 
 To use the FilePicker.io uploader you need to call the view helper like so:
 
-    <%= f.filepickerio_field :avatar %>
+```erb
+<%= form_for @entry do |f| %>
+  <%= f.fp_file_field :image %>
+  <%= f.fp_save_button :image, "Save existing image to cloud", 'image/jpeg' %>
+<%- end %>
+```
 
-    # To include a drag-n-drop area pass the dragdrop parameter
-    <%= f.filepickerio_field :avatar, dragdrop: true %>
+To include a drag-n-drop area pass the dragdrop parameter
+
+```erb
+<%= f.fp_file_field :image, dragdrop: true %>
+```
 
 This will render a hidden input configured for the uploader, which will automatically be initialised on page load.
 
@@ -49,7 +65,9 @@ Additional Options
 
 Any additional Filepicker.io configuration can be passed within an optional data hash passed to the view helper method.
 
-    <%= f.filepickerio_field :uploader_name, data: { "fp-button-text" => "Pick a lolcat to upload" } %>
+```erb
+<%= f.fp_file_field :uploader_name, data: { "fp-button-text" => "Pick a lolcat to upload" } %>
+```
 
 See [https://developers.filepicker.io/docs/web/](https://developers.filepicker.io/docs/web/) for a full list of configuration options.
 
