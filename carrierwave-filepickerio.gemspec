@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "carrierwave_filepickerio/version"
+require "carrierwave-filepickerio/version"
 
 Gem::Specification.new do |s|
   s.name        = "carrierwave-filepickerio"
@@ -14,6 +14,8 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "carrierwave-filepickerio"
 
   s.files         = `git ls-files`.split("\n")
+  s.files.reject! { |fn| fn.include? "example" } # don't include our example rails project which is just for testing
+
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
@@ -21,6 +23,6 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
   s.add_development_dependency "rails"
-  s.add_dependency "filepickerio_rails"
+  s.add_dependency "filepickerio_rails", "~> 0.0.2"
   s.add_dependency "carrierwave"
 end

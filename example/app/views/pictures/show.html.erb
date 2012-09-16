@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @picture.title %>
+</h1>
+<p>
+  <%= image_tag(@picture.image_url) if @picture.image? %>
+</p>
+
+<%= form_for(@picture) do |f| %>
+  <div class="field">
+    <%= f.fp_save_button :image, 'Download image', 'image/jpg' %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>

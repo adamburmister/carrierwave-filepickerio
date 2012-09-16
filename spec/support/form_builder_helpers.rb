@@ -3,7 +3,7 @@
 require 'action_view'
 require 'action_view/template'
 
-require 'carrierwave_filepickerio/form_builder'
+require 'carrierwave-filepickerio/form_builder'
 
 module FormBuilderHelpers
   include ActionView::Helpers::FormHelper
