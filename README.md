@@ -27,9 +27,9 @@ Add your FilePicker.io API key to the CarrierWave initializer:
 Usage
 -----
 
-Setup a CarrierWave uploader as normal. 
+After setting up your CarrierWave uploader as per normal (see the CarrierWave site for more information) you need to configure your page to use the Filepicker.io widget.
 
-Include the filepicker.io JavaScript library in your page (such as your application.html.erb layout):
+First of all, include the filepicker.io JavaScript library in your page (such as your application.html.erb layout):
 
 ```erb
 <%= javascript_include_tag "//api.filepicker.io/v0/filepicker.js" %>
@@ -40,6 +40,9 @@ Include the filepicker.io JavaScript library in your page (such as your applicat
 ```erb
 <%= javascript_include_tag :filepickerio %>
 ```
+
+Form Builders
+-------------
 
 To use the FilePicker.io uploader you need to call the view helper like so:
 
@@ -82,14 +85,7 @@ Additional Options
 Any additional Filepicker.io configuration can be passed within an optional data hash passed to the view helper method.
 
 ```erb
-<%= f.fp_file_field :uploader_name, data: { "fp-button-text" => "Pick a lolcat to upload" } %>
+<%= f.fp_file_field :image, data: { "fp-button-text" => "Pick a lolcat to upload" } %>
 ```
 
 See [https://developers.filepicker.io/docs/web/](https://developers.filepicker.io/docs/web/) for a full list of configuration options.
-
-Roadmap
--------
-
-* Full spec coverage
-* Extract view helpers into non-CarrierWave dependent gem 'filepickerio'
-* Use new gem here, where this becomes a wrapper for CarrierWave only changes
