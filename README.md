@@ -50,13 +50,23 @@ To use the FilePicker.io uploader you need to call the view helper like so:
 <%- end %>
 ```
 
+You can change the button text by passing along a string as the first parameter
+
+```erb
+<%= f.fp_file_field :image, "Pick a picture" %>
+```
+
 To include a drag-n-drop area pass the dragdrop parameter
 
 ```erb
-<%= f.fp_file_field :image, dragdrop: true %>
+<%= f.fp_file_field :image, "Pick a picture", dragdrop: true %>
 ```
 
-This will render a hidden input configured for the uploader, which will automatically be initialised on page load.
+Specify any Filepicker.io additional data options in the data hash
+
+```erb
+<%= f.fp_file_field :image, "Pick a picture", data: { 'fp-mimetypes' => 'image/jpeg,image/png' } %>
+```
 
 You may include any of the additional parameters...
 
